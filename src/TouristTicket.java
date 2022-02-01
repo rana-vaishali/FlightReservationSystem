@@ -1,32 +1,16 @@
-public class TouristTicket {
-    private String pnrNo;
-    private String from;
-    private String to;
-    private String departDateTime;
-    private String arrivalDateTime;
-    private String seatNo;
-    private float price;
-    private boolean isCancelled;
+public class TouristTicket extends Ticket {
+
     private String hotelAddress;
     private String[] selectedTouristLocation;
-    private Flight flight;
-    private Passenger passenger;
+
 
     public TouristTicket(String pnrNo, String from, String to, String departDateTime,
                          String arrivalDateTime, String seatNo, float price, boolean isCancelled, String hotelAddress,
                          Flight flight, Passenger passenger){
-        this.pnrNo = pnrNo;
-        this.from = from;
-        this.to = to;
-        this.departDateTime = departDateTime;
-        this.arrivalDateTime = arrivalDateTime;
-        this.seatNo = seatNo;
-        this.price = price;
-        this.isCancelled = isCancelled;
+        super(pnrNo,from,to,departDateTime,arrivalDateTime,seatNo,price,isCancelled,flight,passenger);
         this.hotelAddress = hotelAddress;
         this.selectedTouristLocation = new String[5];
-        this.flight = flight;
-        this.passenger = passenger;
+
     }
 
     public String getHotelAddress(){
@@ -44,12 +28,5 @@ public class TouristTicket {
     public void removeTouristLocation(String location){
     //remove tourist location
     }
-    public String CheckStatus(){
-        if(isCancelled){
-            return "Cancelled";
-        }else{
-            return "Not Cancelled";
-        }
 
-    }
 }
