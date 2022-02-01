@@ -1,8 +1,9 @@
 public class Passenger {
-    private static int id;
+    private static int idCounter;
+    private int id;
 
     static {
-        id = 0;
+        idCounter = 0;
     }
     //address class
     private static class Address {
@@ -42,16 +43,12 @@ public class Passenger {
     public Passenger(String street, String city,
                            String state, String name, String phone,
                            String email) {
-        this.id = ++id;
+        this.id = ++idCounter;
         this.address = new Address(street, city, state);
         this.contact = new Contact(name, phone, email);
 
     }
 
-
-    public int getId() {
-        return this.id;
-    }
 
     public String getContactDetails() {
         return contact.name + ", " + contact.phone + ", " + contact.email;
@@ -61,5 +58,8 @@ public class Passenger {
         return address.street + ", " + address.city + ", " + address.state;
     }
 
+    public int getPassengerCount(){
+        return  this.id;
+    }
 
 }

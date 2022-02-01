@@ -8,9 +8,12 @@ public class RegularTicket {
     private float price;
     private boolean isCancelled;
     private String specialServices;
+    private Flight flight;
+    private Passenger passenger;
 
     public RegularTicket(String pnrNo, String from, String to, String departDateTime, String arrivalDateTime,
-                         String seatNo, float price, boolean isCancelled, String specialServices){
+                         String seatNo, float price, boolean isCancelled, String specialServices, Flight flight,
+                         Passenger passenger){
         this.pnrNo = pnrNo;
         this.from = from;
         this.to = to;
@@ -20,6 +23,8 @@ public class RegularTicket {
         this.price = price;
         this.isCancelled = isCancelled;
         this.specialServices = specialServices;
+        this.flight = flight;
+        this.passenger = passenger;
     }
 
     public String getSpecialServices(){

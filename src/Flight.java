@@ -28,6 +28,17 @@ public class Flight {
         }
     }
 
+    public String getFlightNumber(){
+        return this.flightNumber;
+    }
+
+    public int getCapacity(){
+        return this.capacity;
+    }
+
+    public int getTotalSeatBooked(){
+        return this.totalSeatBooked;
+    }
 
     public void incrementBookingCounter(){
         ++totalSeatBooked;

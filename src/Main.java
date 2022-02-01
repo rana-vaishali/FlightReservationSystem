@@ -16,7 +16,7 @@ public class Main {
                 new Passenger("2nd street", "noida",
                         "UP", "Sneha Sharma",
                         "9090909090", "sneha.sharma@gmail.com");
-        System.out.println(passenger.getId());
+        //System.out.println(passenger.getId());
         System.out.println(passenger.getAddressDetails());
         System.out.println(passenger.getContactDetails());
 
@@ -24,25 +24,25 @@ public class Main {
                 new Passenger("3nd street", "noida",
                         "UP", "Sneha Sharma",
                         "9090909090", "sneha.sharma@gmail.com");
-        System.out.println(passenger1.getId());
+    //    System.out.println(passenger1.getId());
         System.out.println(passenger1.getAddressDetails());
         System.out.println(passenger1.getContactDetails());
 
         RegularTicket regularTicket = new RegularTicket("1222","delhi","dehradun",
                                                 "12.11.22;1:03","14.11.22;2:00","12",
-                                                  120.00f,false,"food");
+                                                  120.00f,false,"food",p,passenger1);
         System.out.println(regularTicket.getSpecialServices());
         regularTicket.updateSpecialServices("water");
         System.out.println(regularTicket.getSpecialServices());
 
         TouristTicket touristTicket = new TouristTicket("1222","delhi","dehradun",
                 "12.11.22;1:03","14.11.22;2:00","12",
-                120.00f,false,"13 street");
+                120.00f,false,"13 street",p,passenger1);
         System.out.println(touristTicket.getHotelAddress());
         System.out.println(touristTicket.getTouristLocation());
         touristTicket.addTouristLocation("lake");
         touristTicket.removeTouristLocation("lake");
 
-
+        System.out.println(passenger1.getPassengerCount());
     }
 }
