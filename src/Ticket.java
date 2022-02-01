@@ -37,4 +37,8 @@ public abstract class Ticket {
     public void cancel(){
         this.isCancelled = true;
     }
+
+    public String getPnrNo(){
+        return this.pnrNo;
+    }
 }

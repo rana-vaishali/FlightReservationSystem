@@ -35,7 +35,7 @@ public class Main {
         regularTicket.updateSpecialServices("water");
         System.out.println(regularTicket.getSpecialServices());
 
-        TouristTicket touristTicket = new TouristTicket("1222","delhi","dehradun",
+        TouristTicket touristTicket = new TouristTicket("12223","delhi","dehradun",
                 "12.11.22;1:03","14.11.22;2:00","12",
                 120.00f,false,"13 street",p,passenger1);
         System.out.println(touristTicket.getHotelAddress());
@@ -44,5 +44,15 @@ public class Main {
         touristTicket.removeTouristLocation("lake");
 
         System.out.println(passenger1.getPassengerCount());
+        printTicketDetails(touristTicket);
+       printTicketDetails(regularTicket);
+
+    }
+
+    public static void printTicketDetails(TouristTicket ticket){
+        System.out.println(ticket.getPnrNo());
+    }
+    public static void printTicketDetails(RegularTicket ticket){
+        System.out.println(ticket.getPnrNo());
     }
 }
