@@ -2,9 +2,11 @@ public class Passenger {
     private static int idCounter;
     private int id;
 
+    //initializing counter
     static {
         idCounter = 0;
     }
+
     //address class
     private static class Address {
         String street;
@@ -41,8 +43,8 @@ public class Passenger {
 
     //Passenger class constructor
     public Passenger(String street, String city,
-                           String state, String name, String phone,
-                           String email) {
+                     String state, String name, String phone,
+                     String email) {
         this.id = ++idCounter;
         this.address = new Address(street, city, state);
         this.contact = new Contact(name, phone, email);
@@ -58,8 +60,8 @@ public class Passenger {
         return address.street + ", " + address.city + ", " + address.state;
     }
 
-    public int getPassengerCount(){
-        return  this.id;
+    public int getPassengerCount() {
+        return this.id;
     }
 
 }
